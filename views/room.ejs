@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const ROOM_ID = "<%= roomId %>"
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.3.2/peerjs.min.js"
+        integrity="sha512-4wTQ8feow93K3qVGVXUGLULDB9eAULiG+xdbaQH8tYZlXxYv9ij+evblXD0EOqmGWT8NBTd1vQGsURvrQzmKeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.3.1/peerjs.js"
+        integrity="sha512-lAE0sy5Z08UZ1+UGB9OcT0mhaVr0pF0aQFbX9FqSRqqpwbYiBomvDqgrg2P5dLogc8b26fisTcKcMpQ9rXxScA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.2.0/peerjs.js"
+        integrity="sha512-ZqVClQm0QX3GSNK6PgOZZVhsa2b0dgJ4QqTQ5hlGEKa4a7ZcF+nIK2vCTbZzTTgo/XZPsvDCyxbnO3gwrrkhHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="/socket.io/socket.io.js" defer></script>
+    <title>Las Conferencias de Julio</title>
+    <script src="script.js" defer></script>
+    <style>
+        #video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 300px);
+            grid-auto-rows: 300px;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="video-grid"></div>
+</body>
+
+</html>
